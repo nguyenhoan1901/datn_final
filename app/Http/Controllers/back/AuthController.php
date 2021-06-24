@@ -13,11 +13,11 @@ use Illuminate\Support\Str;
 class AuthController extends Controller
 {
     public function back_get_login(){
-        $user = new User();
-        $user->username = "admin";
-        $user->password = Hash::make('123456');
-        $user->is_admin = 1;
-        $user->save();
+        // $user = new User();
+        // $user->username = "admin";
+        // $user->password = Hash::make('123456');
+        // $user->is_admin = 1;
+        // $user->save();
     //    Auth::loginUsingId(1, true);
         if (Auth::check()){
             return redirect()->route('lichtruc.index');

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Account extends Model
 {
 
-    protected $table = "learning_information";
+    protected $table = "learning_infomation";
     public $timestamps = false;
 
     protected $fillable = ['id_student', 'year_entered_school', 'training_level', 'program', 'faculty', 'study_status', 'grade', 'course',

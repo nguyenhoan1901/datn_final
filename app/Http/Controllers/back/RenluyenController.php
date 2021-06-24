@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Renluyen;
 use App\Models\Users;
 use App\Models\student;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -37,6 +38,7 @@ class RenluyenController extends Controller
     {
         $result = new Renluyen();
         $users = student::all();
+
         return view('back.page.renluyen.form', compact('result','users'));
     }
 
@@ -75,8 +77,9 @@ class RenluyenController extends Controller
      */
     public function edit($id)
     {
+        $currentUser = Auth::user();
         $result = Renluyen::find($id);
-        $users = student::all();
+        $users = student::all()->where('gender','male');
         return view('back.page.renluyen.form', compact('result','users'));
     }
 

@@ -14,7 +14,7 @@ class LearningOutcomes extends Migration
     public function up()
     {
         //
-        Schema::create('learning_outcomes', function (Blueprint $table) {
+        Schema::create('learning_result', function (Blueprint $table) {
             $table->unsignedSmallInteger('id_student')->default(NULL)->nullable();
             $table->double('cpa')->default(NULL)->nullable();
             $table->double('gpa')->default(NULL)->nullable();

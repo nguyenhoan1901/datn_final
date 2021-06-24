@@ -16,7 +16,8 @@
 <script src="back/global_assets/js/plugins/loaders/blockui.min.js"></script>
 <!-- /core JS files -->
 
-
+{{-- sử dụng cho editorjax --}}
+<script src="back/global_assets/js/demo_pages/editor_summernote.js"></script>
 
 <!-- Theme JS files -->
 <script src="back/global_assets/js/plugins/tables/footable/footable.min.js"></script>

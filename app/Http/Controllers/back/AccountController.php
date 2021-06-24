@@ -27,12 +27,23 @@ class AccountController extends Controller
         if($isAdmin == 1) {
         //     $accounts = Account::orderBy('learning_infomation.year_entered_school', 'desc')->join('students', 'students.id', '=', 'learning_infomation.id_student')->select('learning_infomation.*','students.*')->get();
         //     return view('back.page.account.list', compact('accounts','hockys','status','currentUser'));
-            $users = commander::where('id',$userId)->get();
-            return view('back.page.account.formC', compact('users', 'currentUser'));
+            $user = commander::where('id',$userId)->get();
+            return view('back.page.account.student_info', compact('users', 'currentUser'));
         }else {
-            $result = Account::where('id_student', $userId)->get();
-            $users = student::where('id',$userId)->get();
-            return view('back.page.account.form', compact('result','users', 'currentUser'));
+            // if (Account::where('id_student', '=', $userId)->exists()) {
+            //     $learning_info_student = Account::where('id_student', $userId)->get();
+            //  }
+            $learning_info_student = Account::where('id_student', $userId)->get();
+            $user = student::where('id',$userId)->get();
+                    // echo "<pre>";
+                    // compact('user') ;
+                    // print_r($user);
+                    // echo "</pre>";
+                    // echo $userId;
+                    // echo $user[0]->fullname;
+                    // return 0;
+                    dd($user);
+            // return view('back.page.account.student_info', compact('learning_info_student','user', 'currentUser'));
         }
 
     }

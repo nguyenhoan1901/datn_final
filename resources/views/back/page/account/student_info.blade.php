@@ -46,7 +46,7 @@
                                         <span class="muted">Họ và tên: </span></td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$student->fullname}}
+                                            {{$user[0]->fullname}}
                                         </span>
                                     </td>
                                     <td class="fieldLabel">
@@ -54,7 +54,7 @@
                                     </td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                             {{$learning_info_student->year_entered_school}}
+                                             {{$learning_info_student->year_entered_school ? $learning_info_student->year_entered_school : ''}}
                                         </span>
                                     </td>
                                 </tr>
@@ -64,14 +64,14 @@
                                     </td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$learning_info_student->training_level}}
+                                            {{$learning_info_student->training_level ? $learning_info_student->training_level : ''}}
                                         </span>
                                     </td>
                                     <td class="fieldLabel">
                                         <span class="muted">Chương trình đào tạo:</span></td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$learning_info_student->program}}
+                                            {{$learning_info_student->program ? $learning_info_student->program : ''}}
                                         </span>
                                     </td>
                                 </tr>
@@ -81,14 +81,14 @@
                                     </td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$learning_info_student->khoa}}
+                                            {{$learning_info_student->faculty ? $learning_info_student->faculty : ''}}
                                         </span>
                                     </td>
                                     <td class="fieldLabel">
                                         <span class="muted">Tình trạng học tập:</span></td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                             {{$currentUser->tinh_trang_hoc_tap}}
+                                             {{$learning_info_student->study_status ? $learning_info_student->study_status : ''}}
                                         </span>
                                     </td>
                                 </tr>
@@ -98,14 +98,14 @@
                                     </td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                             {{$currentUser->gioi_tinh}}
+                                             {{$user->gender}}
                                         </span>
                                     </td>
                                     <td class="fieldLabel">
                                         <span class="muted">Lớp:</span></td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$currentUser->lop ? $currentUser->lop : ''}}CNTT2-01-2016
+                                          fdsf  {{-- {{$currentUser->lop ? $currentUser->lop : ''}}CNTT2-01-2016 --}}
                                         </span>
                                     </td>
 
@@ -116,14 +116,14 @@
                                     </td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$currentUser->khoa_hoc}}
+                                            {{$learning_info_student->course ? $learning_info_student->course : ''}}
                                         </span>
                                     </td>
                                     <td class="fieldLabel">
                                         <span class="muted">Email:</span></td>
                                     <td class="fieldValue">
                                         <span class="value">
-                                            {{$currentUser->email}}
+                                            {{$user->email}}
                                         </span>
                                     </td>
 
@@ -143,7 +143,7 @@
                                     <span class="muted">Tổng kết kỳ học:</span></td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                           {{-- {{$hocKys[$hocTapInfo->ky_hoc] ? $hocKys[$hocTapInfo->ky_hoc] : ''}} --}}
+                                           fd{{-- {{$hocKys[$hocTapInfo->ky_hoc] ? $hocKys[$hocTapInfo->ky_hoc] : ''}} --}}
                                         </span>
                                 </td>
                                 <td class="fieldLabel">
@@ -151,7 +151,7 @@
                                 </td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                            {{-- {{$hocTapInfo->gpa ? $hocTapInfo->gpa : ''}} --}}
+                                          gfd  {{-- {{$hocTapInfo->gpa ? $hocTapInfo->gpa : ''}} --}}
                                         </span>
                                 </td>
                             </tr>
@@ -160,7 +160,7 @@
                                     <span class="muted">Số TC nợ đăng ký:</span></td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                            {{-- {{$hocTapInfo->mon_no ? $hocTapInfo->mon_no : ''}} --}}
+                                            sdfs{{-- {{$hocTapInfo->mon_no ? $hocTapInfo->mon_no : ''}} --}}
                                         </span>
                                 </td>
                                 <td class="fieldLabel">
@@ -168,7 +168,7 @@
                                 </td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                            {{-- {{$hocTapInfo->so_tc_tich_luy ? $hocTapInfo->so_tc_tich_luy : ''}} --}}
+                                            fsd{{-- {{$hocTapInfo->so_tc_tich_luy ? $hocTapInfo->so_tc_tich_luy : ''}} --}}
                                         </span>
                                 </td>
                             </tr>
@@ -177,7 +177,7 @@
                                     <span class="muted">Trình độ sinh viên:</span></td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                             {{-- {{$hocTapInfo->thoi_gian_hoc ? $hocTapInfo->thoi_gian_hoc : ''}} năm --}}
+                                             {{$learning_info_student->grade ? $learning_info_student->grade : ''}} năm
                                         </span>
                                 </td>
                                 <td class="fieldLabel">
@@ -185,7 +185,7 @@
                                 </td>
                                 <td class="fieldValue">
                                         <span class="value">
-                                             {{-- {{$hocTapInfo->muc_canh_cao ? $hocTapInfo->muc_canh_cao : ''}} --}}
+                                             fg{{-- {{$hocTapInfo->muc_canh_cao ? $hocTapInfo->muc_canh_cao : ''}} --}}
                                         </span>
                                 </td>
                             </tr>

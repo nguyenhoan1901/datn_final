@@ -48,7 +48,7 @@
                 <!-- Main -->
                 <li class="nav-item-header"><div class="text-uppercase font-size-xs line-height-xs">Main</div> <i class="icon-menu" title="Main"></i></li>
                 <li class="nav-item">
-                    <a href="{{route('home')}}" class="nav-link  {{Request::is($prefix)?'active':''}}">
+                    <a href="{{route('tintuc.index')}}" class="nav-link  {{Request::is($prefix)?'active':''}}">
                         <i class="icon-home4"></i>
                         <span>
                             Bảng điều khiển

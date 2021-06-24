@@ -47,6 +47,7 @@ Route::middleware(['auth'])->namespace('back')->group(function () {
         'vipham'=>'ViphamController',
         'account'=>'AccountController',
         'commander'=>'CommanderController',
+        'tintuc' => 'NewsController',
     );
 
     foreach($route_list as $prefix=>$controller){
